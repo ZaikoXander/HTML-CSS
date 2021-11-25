@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>
+            017b
+        </title>
+    </head>
+    <body>
+        <h2>
+            The picture Element
+        </h2>
+        <picture>
+            <source srcset="017b\img_avatar.png">
+            <source srcset="img_girl.jpg">
+            <img src="teste.png" style="width: 20%;">
+        </picture>
+        <p>
+            The picture element can be used when the image format is not supported by all devices.
+        </p>
+        <p>
+            The device will use the first image format it supports, and ignore the rest of the images.
+        </p>
+        <p>
+            <strong>
+                Note:
+            </strong>
+            The browser will use the first < source > element with matching attribute values, and ignore any following < source > elements.
+        </p>
+    </body>
+</html>

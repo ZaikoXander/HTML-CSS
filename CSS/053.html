@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Links // And some JS">
+    <title>053</title>
+    <style>
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        /* unvisited link */
+        a:link {
+            color: red;
+            text-decoration: none;
+            background-color: yellow;
+        }
+        /* visited link */
+        a:visited {
+            color: green;
+            text-decoration: none;
+            background-color: cyan;
+        }
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+            text-decoration: underline;
+            background-color: lightgreen;
+        }
+        /* selected link */
+        a:active {
+            color: blue;
+            text-decoration: underline;
+            background-color: hotpink;
+        }
+    </style>
+    <script>
+        function ativar() {
+            var elemento = document.getElementById('test');
+            elemento.style.color = 'red';
+            elemento.style.textDecoration = 'underline';
+
+            var elemento1 = document.createElement("a");
+            elemento1.appendChild(document.createTextNode('A Link'));
+            elemento1.href = "https://youtube.com";
+            document.getElementById('test1').appendChild(elemento1);
+
+        }
+        function desativar() {
+            var elemento = document.getElementById('test');
+            elemento.style.color = 'black';
+            elemento.style.textDecoration = 'none';
+
+            var elemento1 = document.getElementById('test1');
+            var child = elemento1.lastElementChild;
+            while (child) {
+                elemento1.removeChild(child);
+                child = elemento1.lastElementChild;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 onmouseover="ativar();" onmouseout="desativar();">Styling a link depending on state</h2>
+    <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+    <p><b id="test" onmouseover="alert('Mensagem.');">Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+    <p><b id="test1"></b></p>
+</body>
+</html>

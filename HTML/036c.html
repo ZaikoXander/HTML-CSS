@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            036c
+        </title>
+    </head>
+    <body>
+        <h2>
+            Responsive Image
+        </h2>
+        <p>
+            "max-width: 100%" prevents the image from getting bigger than its original size.
+            However, if you make the browser window smaller, the image will still scale down.
+        </p>
+        <p>
+            Resize the browser window to see the effect.
+        </p>
+        <img src="img_girl.jpg" style="max-width: 100%; height: auto;">
+        <hr>
+        <h2>
+            Show Different Images Depending on Browser Width
+        </h2>
+        <p>
+            Resize the browser width and the image will change at 600px and 1500px.
+        </p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="img_smallflower.jpg">
+            <source media="(max-width: 1500px)" srcset="img_flowers.jpg">
+            <source srcset="flowers.jpg">
+            <img src="img_flowers.jpg" alt="Flowers" style="width: auto;">
+        </picture>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Padding and Element Width">
+    <title>026</title>
+    <style>
+        div.ex1 {
+            width: 300px;
+            background-color: yellow;
+        }
+        div.ex2 {
+            width: 300px;
+            padding: 25px;
+            background-color: lightblue;
+        }
+        div.ex3 {
+            width: 300px;
+            padding: 25px;
+            box-sizing: border-box;
+            background-color: lightblue;
+        }
+        p.lpadding1 {
+            padding-left: 2cm;
+        }
+        p.lpadding2 {
+            padding-left: 50%;
+        }
+        p.rpadding1{
+            padding-right: 2cm;
+        }
+        p.rpadding2 {
+            padding-right: 50%;
+        }
+        p.tpadding1 {
+            padding-top: 2cm;
+        }
+        p.tpadding2 {
+            padding-top: 50%;
+        }
+        p.bpadding1 {
+            padding-bottom: 2cm;
+        }
+        p.bpadding2 {
+            padding-bottom: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Padding and element width</h2>
+    <div class="ex1">This div is 300px wide.</div>
+    <br>
+    <div class="ex2">
+        The width of this div is 350px, even though it is defined as 300px in the CSS.
+    </div>
+
+    <h2>Padding and element width - width box-sizing</h2>
+    <div class="ex3">
+        The width of this div remains at 300px, in spite of the 50px of total left and right
+        padding, because of the box-sizing: border-box property.
+    </div>
+
+    <h1>The padding-left Property</h1>
+    <p>This is a text with no left padding.</p>
+    <p class="lpadding1">This text has a left padding of 2cm.</p>
+    <p class="lpadding2">This text has a left padding of 50%.</p>
+
+    <h1>The padding-right Property</h1>
+    <p>
+        This is a text with no right padding. This is a text with no right padding. This is a
+        text with no right padding.
+    </p>
+    <p class="rpadding1">
+        This text has a right padding of 2 cm. This text has a right padding of 2 cm. This
+        text has a right padding of 2 cm.
+    </p>
+    <p class="rpadding2">
+        This text has a right padding of 50%. This text has a right padding of 50%. This text
+        has a right padding of 50%.
+    </p>
+
+    <h1>The padding-top Property</h1>
+    <p>
+        This is a text with no top padding. This is a text with no top padding. This is a text
+        with no top padding.
+    </p>
+    <p class="tpadding1">
+        This text has a top padding of 2 cm. This text has a top padding of 2 cm. This text
+        has a top padding of 2 cm.
+    </p>
+    <p class="tpadding2">
+        This text has a top padding of 50%. This text has a top padding of 50%. This text has
+        a top padding of 50%.
+    </p>
+
+    <h1>The padding-bottom Property</h1>
+    <p>
+        This is a text with no bottom padding. This is a text with no bottom padding. This is
+        a text with no bottom padding.
+    </p>
+    <p class="bpadding1">
+        This text has a bottom padding of 2 cm. This text has a bottom padding of 2 cm. This
+        text has a bottom padding of 2 cm.
+    </p>
+    <p class="bpadding2">
+        This text has a bottom padding of 50%. This text has a bottom padding of 50%. This
+        text has a bottom padding of 50%.
+    </p>
+</body>
+</html>

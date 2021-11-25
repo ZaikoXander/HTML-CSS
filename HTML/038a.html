@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Semantic Elements in HTML">
+        <title>038</title>
+        <style>
+            .all-browsers {
+                margin: 0;
+                padding: 5px;
+                background-color: lightgray;
+            }
+            /*
+                div p ==  Descendant Selector
+                div > p == Child Selector
+            */
+            .all-browsers > h1, .browser {
+                margin: 10px;
+                padding: 5px;
+            }
+            .browser {
+                background: white;
+            }
+            .browser > h2, p {
+                margin: 4px;
+                font-size: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Semantic Elements in HTML</h2>
+        <p>
+            Many web sites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer.
+        </p>
+        <p>In HTML there are some semantic elements that can be used to define different parts of a web page:</p>
+        <ul style="width: 374px; float: left;">
+            <li>&lt;article&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;details&gt;</li>
+            <li>&lt;figcaption&gt;</li>
+            <li>&lt;figure&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;mark&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;summary&gt;</li>
+            <li>&lt;time&gt;</li>
+        </ul>
+        <img src="img_sem_elements.gif" width="219" height="258">
+
+        <hr>
+
+        <h2>HTML &lt;section&gt; Element</h2>
+        <p>The &lt;section&gt; element defines a section in a document.</p>
+        <p>
+            According to W3C's HTML documentation: "A section is a thematic grouping of
+            content, typically with a heading."
+        </p>
+        <p>Examples of where a &lt;section&gt; element can be used:</p>
+        <ul>
+            <li>Chapters</li>
+            <li>Introduction</li>
+            <li>News items</li>
+            <li>Contact information</li>
+        </ul>
+        <p>
+            A web page could normally be split into sections for introduction, content, and
+            contact information.
+        </p>
+
+        <br>
+
+        <section>
+            <h1>WWF</h1>
+            <p>
+                The World Wide Fund for Nature (WWF) is an international organization working
+                on issues regarding the conservation, research and restoration of the environment,
+                formerly named the World Wildlife Fund. WWF was founded in 1961.
+            </p>
+        </section>
+        <section>
+            <h1>WWF's Panda symbol</h1>
+            <p>
+                The Panda has become the symbol of WWF. The well-know panda logo of WWF
+                originated from a panda named Chi Chi that was transferred from the Beijing
+                Zoo to the establishment of WWF.
+            </p>
+        </section>
+
+        <hr>
+
+        <h2>HTML &lt;article&gt; Element</h2>
+        <p>The &lt;article&gt; element specifies independent, sel-contained content.</p>
+        <p>
+            An article should make sense on its own, and it should be possible to distribute
+            it independently from the rest of the web site.
+        </p>
+        <p>Examples of where &lt;article&gt; element can be used:</p>
+        <ul>
+            <li>Forum posts</li>
+            <li>Blog posts</li>
+            <li>User comments</li>
+            <li>Product cards</li>
+            <li>Newspaper articles</li>
+        </ul>
+
+        <br>
+
+        <article class="all-browsers">
+            <h1>Most Popular Browsers</h1>
+            <article class="browser">
+                <h2>Google Chrome</h2>
+                <p>
+                    Google Chrome is a web browser developed by Google, released in 2008. Chrome
+                    is the world's most popular web browser today!
+                </p>
+            </article>
+            <article class="browser">
+                <h2>Mozilla Firefox</h2>
+                <p>
+                    Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox
+                    has been the second most popular web browser since January, 2018.
+                </p>
+            </article>
+            <article class="browser">
+                <h2>Microsoft Edge</h2>
+                <p>
+                    Microsoft Edge is a web browser developed by Microsoft, released in 2015.
+                    Microsoft Edge replaced Internet Explorer.
+                </p>
+            </article>
+        </article>
+
+        <hr>
+
+        <h2>Nesting &lt;article&gt; in &lt;section&gt; or Vice Versa?</h2>
+        <p>The &lt;article&gt; element specifies independen, self-contained content.</p>
+        <p>The &lt;section&gt; element defines section in a document.</p>
+        <p>Can we use the definitions to decide how to nest those elements? No, we cannot!</p>
+        <p>
+            So, you will find HTML pages with &lt;section&gt; elements containing
+            &lt;article&gt; elements, and &lt;article&gt; elements containing &lt;section&gt;
+            elements.
+        </p>
+
+        <hr>
+
+        <h2>HTML &lt;header&gt; Element</h2>
+        <p>
+            The &lt;header&gt; element represents a container for introductory content or a
+            set of navigational links.
+        </p>
+        <p>A &lt;header&gt; element typically contains:</p>
+        <ul>
+            <li>one or more heading elements (&lt;h1&gt; - &lt;h6&gt;)</li>
+            <li>logo or icon</li>
+            <li>authorship information</li>
+        </ul>
+        <p>
+            <strong>Note:</strong>
+            You can have several &lt;header&gt; elements in one HTML document. However,
+            &lt;header&gt; cannot be placed within a &lt;footer&gt;, &lt;address&gt; or
+            another &lt;header&gt; element.
+        </p>
+        
+        <br>
+
+        <article>
+            <header>
+                <h1>What Does WWF Do?</h1>
+                <p>WWF's mission:</p>
+            </header>
+            <p>
+                WWF's mission is to stop the degradation of our planet's natural environment,
+                and build a future in which humans live in harmony with nature.
+            </p>
+        </article>
+
+        <hr>
+
+        <h2>HTML &lt;footer&gt; Element</h2>
+        <p>The &lt;footer&gt; element defines a footer for a document or section.</p>
+        <p>A &lt;footer&gt; element typically contains:</p>
+        <ul>
+            <li>authorship information</li>
+            <li>copyright information</li>
+            <li>contact information</li>
+            <li>sitemap</li>
+            <li>back to top links</li>
+            <li>related documents</li>
+        </ul>
+        <p>You can have several &lt;footer&gt; elements in one document.</p>
+
+        <hr>
+
+        <footer>
+            <p>Author: Hege Refsnes</p>
+            <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+        </footer>
+    </body>
+</html>

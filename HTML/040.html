@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="HTML Form Attributes">
+        <title>040</title>
+    </head>
+    <body>
+        <h2>HTML Forms</h2>
+        <!--
+            The action attribute defines the action to be performed when the form is submitted.
+
+            Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+
+            In the example below, the form data is sent to a file called "action_page.php". This file contains a server-side script that handles the form data:
+        -->
+        <!--
+            The target attribute specifies where to display the response that is received after submitting the form.
+
+            The target attribute can have one of the following values:
+
+            _blank	The response is displayed in a new window or tab
+            _self	The response is displayed in the current window(default)
+            _parent	The response is displayed in the parent frame
+            _top	The response is displayed in the full body of the window
+            framename	The response is displayed in a named iframe
+        -->
+        <form action="/action_page.php" target="_blank">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p>
+            If you click the "Submit" button, the form-data will be sent to a page called
+            "/action_page.php".
+        </p>
+        <hr>
+        <h2>The method Attribute</h2>
+        <p>This form will be submitted using the GET method:</p>
+        <form action="/action_page.php" target="_blank" method="get">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+        </form>
+        <p>
+            After you submit, notice that the form values is visible in the address bar of the
+            new browser tab.
+        </p>
+        <hr>
+        <h2>The method Attribute</h2>
+        <p>This form will be submitted using the POST method:</p>
+        <form action="/action_page.php" target="_blank" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+        </form>
+        <p>
+            After you submit, notice that, unlike the GET method, the form values is NOT
+            visible in the address bar of the new browser tab.
+        </p>
+        <hr>
+        <h2>The form autocomplete attribute</h2>
+        <p>
+            Fill in and submit the form, then reload the page, start to fill in the form again
+            - and see how autocomplete works.
+        </p>
+        <p>Then, try to set autocomplet to "off".</p>
+        <form action="/action_page.php" autocomplete="on">
+            <label for="fname">First name:</label>
+            <input type="text" name="fname" id="fname"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h2>The form novalidate attribute</h2>
+        <p>
+            The novalidate attribute indicates that the form input is not to be validated on
+            submit:
+        </p>
+        <form action="/action_page.php" novalidate> <!-- Try just "validate" -->
+            <label for="email">Enter your email:</label>
+            <input type="email" name="email" id="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p>
+            <strong>Note:</strong>
+            The novalidate attribute of the form tag is not supported in Safari 10
+            (or earlier).
+        </p>
+    </body>
+</html>

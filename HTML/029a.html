@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        The class attribute is often used to point to a class name in a style sheet. It can
+        also be used by a JavaScript to access and manipulate elements with the specific
+        class name.
+    -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>
+            029
+        </title>
+        <script>
+            function show(show, hidden) {
+                document.getElementById(show).style.display='block';
+                document.getElementById(hidden).style.display='none';
+                return false;
+            }
+        </script>
+        <style>
+            .city {
+                background-color: tomato;
+                color: white;
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+            .city1 {
+                background-color: tomato;
+                color: white;
+                padding: 10px;
+            }
+            .note {
+                font-size: 120%;
+                color: red;
+            }
+            .main {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='Page1'>
+            <div class="city">
+                <h2>
+                    London
+                </h2>
+                <p>
+                    London is the capital of England.
+                </p>
+            </div>
+            <div class="city">
+                <h2>
+                    Paris
+                </h2>
+                <p>
+                    Paris is the capital of France.
+                </p>
+            </div>
+            <div class="city">
+                <h2>
+                    Tokyo
+                </h2>
+                <p>
+                    Tokyo is the capital of Japan
+                </p>
+            </div>
+            <button onclick="return show('Page2', 'Page1');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 2
+            </button>
+        </div>
+        <!--
+            The class attribute can be used on any HTML element.
+            The class name is case sensitive!
+        -->
+        <div id="Page2" style="display: none;">
+            <h1>
+                My <span class="note">Important</span> Heading
+            </h1>
+            <p>
+                This is some <span class="note">important</span> text.
+            </p>
+            <button onclick="return show('Page1', 'Page2');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 1
+            </button>
+            <br>
+            <button onclick="return show('Page3', 'Page2');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 3
+            </button>
+        </div>
+        <div id="Page3" style="display: none;">
+            <h2>
+                The class Attribute
+            </h2>
+            <p>
+                Use CSS to style elements with the class name "city1":
+            </p>
+            <h2 class="city1">
+                London
+            </h2>
+            <p>
+                London is the capital of England.
+            </p>
+            <h2 class="city1">
+                Paris
+            </h2>
+            <p>
+                Paris is the capital of France.
+            </p>
+            <h2 class="city1">
+                Tokyo
+            </h2>
+            <p>
+                Tokyo is the capital of Japan.
+            </p>
+            <button onclick="return show('Page2', 'Page3');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 2
+            </button>
+            <br>
+            <button onclick="return show('Page4', 'Page3');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 4
+            </button>
+        </div>
+        <div id="Page4" style="display: none;">
+            <h2>
+                Multiple Classes
+            </h2>
+            <p>
+                Here, all three h2 elements belongs to the "city" class. In addition, London
+                also belongs to the "main" class, which center-aligns the text.
+            </p>
+            <!--
+                HTML elements can belong to more than one class.
+            -->
+            <h2 class="city1 main">
+                London
+            </h2>
+            <h2 class="city1">
+                Paris
+            </h2>
+            <h2 class="city1">
+                Tokyo
+            </h2>
+            <button onclick="return show('Page3', 'Page4');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 3
+            </button>
+            <br>
+            <button onclick="return show('Page5', 'Page4');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 5
+            </button>
+        </div>
+        <div id="Page5" style="display: none;">
+            <h2>
+                Different Elements Can Share Same Class 
+            </h2>
+            <p>
+                Even if the two elements do not have the same tag name, they can both point
+                to the same class, and get the same CSS styling:
+            </p>
+            <!--
+                Different HTML elements can point to the same class name.
+            -->
+            <h2 class="city1">
+                Paris
+            </h2>
+            <p class="city1">
+                Paris is the capital of France.
+            </p>
+            <button onclick="return show('Page4', 'Page5');" style="border-radius: 10px; background-color: orange; color: white; margin-bottom: 10px;">
+                Show page 4
+            </button>
+        </div>
+    </body>
+</html>

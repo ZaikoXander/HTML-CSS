@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>
+            020a
+        </title>
+        <style>
+            table, p {
+                width: 50%;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            .alignleft {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            We have horizontal tables:
+        </h2>
+        <p style="text-align: center;">
+            By default, table headers are bold and centered:
+        </p>
+        <table>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+        </table>
+        <p style="text-align: center;">
+            But we can align to left:
+        </p>
+        <table>
+            <tr>
+              <th class="alignleft">Firstname</th>
+              <th class="alignleft">Lastname</th>
+              <th class="alignleft">Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+        </table>
+        <h2>
+            Or we can have vertical tables:
+        </h2>
+        <table>
+            <tr>
+                <th>
+                    Firstname
+                </th>
+                <td>
+                    Jill
+                </td>
+                <td>
+                    Eve
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Lastname
+                </th>
+                <td>
+                    Smith
+                </td>
+                <td>
+                    Jackson
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Age
+                </th>
+                <td>
+                    94
+                </td>
+                <td>
+                    50
+                </td>
+            </tr>
+        </table>
+        <h2>
+            Or have a Header for Multiple Columns:
+        </h2>
+        <table>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+            </tr>
+        </table>
+        <h2>
+            Or add a caption as a heading for the entire table:
+        </h2>
+        <table>
+            <caption>
+                Montly savings
+            </caption>
+            <tr>
+                <th>
+                    Month
+                </th>
+                <th>
+                    Savings
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    January
+                </td>
+                <td>
+                    $100
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    February
+                </td>
+                <td>
+                    $50
+                </td>
+            </tr>
+        </table>
+        <h2>
+            Or have a vertical Header for Multiple rows:
+        </h2>
+        <table>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <td>
+                    Jill
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2">
+                    Phone
+                </th>
+                <td>
+                    555-1234
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    555-8745
+                </td>
+            </tr>
+        </table>
+        <button onclick="document.location='021a.html'" title="021a" style="color: blue; margin: 10px 0px 0px 10px;">
+            021a
+        </button>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Box Model">
+    <title>032</title>
+    <style>
+        .div {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        div {
+            display: block;
+        }
+        .boxmodel {
+            margin: 30px 0;
+            font-family: "Lato", sans-serif;
+            width: 90%;
+        }
+        .boxmodel .margin {
+            background: #f1f1f1;
+            padding: 45px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border: 2px dashed #bbb;
+            transition: all .25s ease-in-out;
+        }
+        .boxmodel .margin::before {
+            content: "Margin";
+            font-size: 1.4em;
+            position: absolute;
+            left: 0;
+            top: 1.8%;
+            width: 100%;
+            text-align: center;
+        }
+        .boxmodel .border {
+            padding: 45px;
+            position: relative;
+        }
+        .theme {
+            color: #fff !important;
+            background-color: #04AA6D !important;
+        }
+        .boxmodel .border::before {
+            content: "Border";
+            font-size: 1.4em;
+            color: black;
+            position: absolute;
+            left: 0;
+            top: 2.5%;
+            width: 100%;
+            text-align: center;
+        }
+        .boxmodel .padding {
+            color: black;
+            padding: 45px;
+            position: relative;
+            background: #f1f1f1;
+        }
+        .boxmodel .padding::before {
+            content: "Padding";
+            font-size: 1.4em;
+            position: absolute;
+            left: 0.5%;
+            top: 3.7%;
+            width: 100%;
+            text-align: center;
+        }
+        .boxmodel .content {
+            padding: 20px;
+            position: relative;
+            background: white;
+            border: 2px dashed #bbb;
+        }
+        .boxmodel .content::before {
+            content: "Content";
+            font-size: 1.4em;
+            display: block;
+            text-align: center;
+            line-height: 3.5;
+        }
+    </style>
+</head>
+<body>
+    <h2>The CSS Box Model</h2>
+    <div class="boxmodel">
+        <div class="margin">
+            <div class="border theme">
+                <div class="padding">
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Demonstrating the Box Model</h2>
+    <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+    <div class="div">
+        This text is the content of the box. We have added a 50px padding, 20px margin and a
+        15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</body>
+</html>

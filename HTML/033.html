@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>033</title>
+    </head>
+    <body>
+        <!--
+            A file path describes the location of a file in a web site's folder structure.
+
+            File Path Examples
+
+            | <img src="picture.jpg">	The "picture.jpg" file is located in the same folder
+            | as the current page
+
+            | <img src="images/picture.jpg">	The "picture.jpg" file is located in the
+            | images folder in the current folder
+
+            | <img src="/images/picture.jpg">	The "picture.jpg" file is located in the
+            | images folder at the root of the current web
+
+            | <img src="../picture.jpg">	The "picture.jpg" file is located in the folder
+            | one level up from the current folder
+        -->
+
+        <h2>
+            Using a Full URL File Path
+        </h2>
+        <img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain" style="width: 300px;">
+        <hr>
+        <h2>
+            Using a Relative File Path
+        </h2>
+        <img src="/myfolder/anotherfolder/picture.jpg" alt="Mountain" style="width: 300px;">
+        <p>
+            Or:
+        </p>
+        <img src="myfolder/anotherfolder/picture.jpg" alt="Mountain" style="width: 300px;">
+        <p>
+            Or:
+        </p>
+        <img src="../myfolder/anotherfolder/picture.jpg" alt="Mountain" style="width: 300px;">
+    </body>
+</html>

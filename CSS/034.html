@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Outline">
+    <title>034</title>
+    <style>
+        /*
+            CSS has the following outline properties:
+
+            outline-style
+            /*
+                dotted - Defines a dotted outline
+                dashed - Defines a dashed outline
+                solid - Defines a solid outline
+                double - Defines a double outline
+                groove - Defines a 3D grooved outline
+                ridge - Defines a 3D ridged outline
+                inset - Defines a 3D inset outline
+                outset - Defines a 3D outset outline
+                none - Defines no outline
+                hidden - Defines a hidden outline
+            /*
+            outline-color
+            outline-width
+            outline-offset
+            outline
+            -//-
+            Outline differs from borders! Unlike border, the outline is drawn outside the
+            element's border, and may overlap other content. Also, the outline is NOT a part
+            of the element's dimensions; the element's total width and height is not affected
+            by the width of the outline.
+        */
+        p {
+            border: 2px solid black;
+            outline: #4CAF50 solid 10px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Outline</h2>
+    <p>This element has a 2px black border and a green outline with a width of 10px.</p>
+</body>
+</html>

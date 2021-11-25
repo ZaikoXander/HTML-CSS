@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            015
+        </title>
+        <style>
+            p, h2 {
+                color: white;
+            }
+            .workplace {
+                float: left;
+            }
+            .croissantex {
+                float: right;
+            }
+            #workplace {
+                box-shadow: 5px 5px 10px black;
+                border-radius: 10px;
+            }
+            #croissantex {
+                box-shadow: 5px 5px 10px black;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body style="background-color:rgb(24, 19, 19);">
+        <h1 style="text-align: center; color: red; -webkit-text-stroke: 2px white; font-size: 50px;">Site for testing mapping</h1>
+        <div class="workplace">
+            <h2>Image Maps</h2>
+            <p>
+                Click on the computer, the phone, or the cup of coffe to go to a new page and 
+                read more about the topic:
+            </p>
+            <img id="workplace" src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+            <map name="workmap">
+                <!-- for shape rect 34 pixels from the left margin and 44 pixels from the top -->
+                <!-- 270 pixels from the left margin and 350 pixels from the top -->
+                <area shape="rect" coords="34,44,270,350" href="https://w3schools.com/html/computer.htm" alt="Computer">
+                <area shape="rect" coords="290,172,333,250" href="https://w3schools.com/html/phone.htm" alt="Phone">
+                <!-- for circle get the coordenates of the centes and just increase radius -->
+                <!-- (337,300) and 44 of radius -->
+                <area shape="circle" coords="337,300,44" href="https://w3schools.com/html/coffee.htm" onclick="myFunction()" alt="Cup of coffe">
+            </map>
+        </div>
+        <script>
+            function myFunction() {
+                alert("You clicked the coffee cup!");
+            }
+        </script>
+        <div class="croissantex">
+            <h2>
+                Croissant example:
+            </h2>
+            <p>
+                Click on the Croissant to go to a new page and read more about the topic:
+            </p>
+            <img id="croissantex" src="frenchfood.jpg" alt="Croissant" usemap="#foodmap" width="450" height="675">
+            <map name="foodmap">
+                <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="https://w3schools.com/html/croissant.htm" alt="Croissant">
+            </map>
+        </div>
+        <p style="color:rgb(24, 19, 19); background-color: black; border: 5px solid black; width: 4px; height: 800px; margin: auto;">|</p>
+    </body>
+</html>
