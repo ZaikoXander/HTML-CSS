@@ -1,0 +1,16 @@
+body {
+    background: #181818;
+    color: white;
+    font-family: sans-serif;
+}
+h1, div, a {
+    justify-content: center;
+    display: flex;
+}
+img {
+    margin: 3px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
