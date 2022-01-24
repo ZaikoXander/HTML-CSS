@@ -34,4 +34,4 @@ Abaixo coloquei fotos para exemplificar apenas ***o mínimo*** de potêncial que
 A única coisa que pode garantir que você fique bom em algo é o quanto você treina.<br>
 Essas ferramentas devem apenas fazer ***o mínimo*** por você, mas você com o uso delas deve ser capaz do ***máximo***!
 
-[***Zaiko Xander***](https://github.com/zaikoxander) 😍💻
+[***Zaiko Xander***](https://github.com/ZaikoXander) 😍💻
