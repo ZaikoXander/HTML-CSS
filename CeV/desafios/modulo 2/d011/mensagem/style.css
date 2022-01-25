@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    background: black url('img/espaco.jpg') center center no-repeat fixed;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 550px;
+}
+
+article {
+    position: relative;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    background: white;
+}
+
+article::before {
+    position: absolute;
+    z-index: -1;
+    top: -0.1em;
+    right: -0.1em;
+    bottom: -0.1em;
+    left: -0.1em;
+    border: inherit;
+	border-color: transparent;
+	background: inherit;
+    background-clip: border-box;
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+	-webkit-clip-path: inset(25);
+	clip-path: inset(25);
+	content: '';
+    border-radius: 15px;
+}
+
+article h1 {
+    text-align: center;
+    letter-spacing: 4px;
+}
